@@ -1,0 +1,57 @@
+
+  .menu-wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+   display: none;
+    right: 0;
+   max-height: 60px;
+   width: 100vw;
+    background: #fff;
+    
+    z-index: 10000;
+
+    .bottom-nav   {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border-radius: 200px;
+    
+      li {
+        flex: 1;
+        font-size: 50px;
+        cursor: pointer;
+        
+        svg {
+          font-size: 20px;
+          
+        }
+        
+        .active {
+          color: black;
+           svg {
+             font-size: 20px;
+           }
+         
+         
+          
+          transition:all 1s ease-in-out;
+        }
+        .btn {
+          &:hover {
+            color: black;
+            font-size: 22px;
+          }
+        }
+        
+      }
+    }
+    
+  }
+  @media (max-width:1130px) {
+    .menu-wrapper {
+      display: block;
+    }
+    
+  }

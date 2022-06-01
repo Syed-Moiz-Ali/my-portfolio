@@ -1,0 +1,216 @@
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+h1 {
+    font-size: 22px;
+}
+.about {
+    margin-left: 22rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+    
+
+}
+@keyframes about {
+  to {
+    transform: translateX(0);
+  }
+}
+.about-me {
+  width: 450px;
+  animation: 1s  about 1s forwards;
+  transform: translateY(300%); 
+  
+}
+.profile {
+  width: 400px;
+  height: 450px;
+  animation: 1s  about 1s forwards;
+  transform: translateY(300%); 
+}
+
+
+
+.my-data {
+    display: grid;
+    grid-template-columns: 500px 450px;
+    margin-top: 1rem;
+    .address {
+      animation: 1s  about 2s forwards;
+      transform: translateY(450%); 
+        
+        
+    span {
+        
+        min-width: 90px;
+        display: inline-block;
+        font-weight: 700;
+        color: #000;
+        
+    }
+    p {
+        font-size: 12px;
+        float: left;
+        position: relative;
+        left: 12px;
+        margin:4px 0;
+        
+    }
+    }
+}
+button {
+    margin-top: 1rem;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    &.learn-more {
+      width: 12rem;
+      height: auto;
+      .circle {
+         transition:all, 0.45s, cubic-bezier(0.65,0,.076,1) ease-in-out;
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 3rem;
+        height: 3rem;
+        background: rgb(99, 97, 97);
+        border-radius: 1.625rem;
+        .icon {
+          transition:all 0.45s, cubic-bezier(0.65,0,.076,1) ease-in-out;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          background: white;
+          &.arrow {
+            transition:all, 0.45s, cubic-bezier(0.65,0,.076,1) ease-in-out;
+            left: 0.625rem;
+            width: 1.125rem;
+            height: 0.125rem;
+            background: none;
+            &::before {
+              position: absolute;
+              content: '';
+              top: -0.25rem;
+              right: 0.0625rem;
+              width: 0.625rem;
+              height: 0.625rem;
+              border-top: 0.125rem solid #fff;
+              border-right: 0.125rem solid #fff;
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+      .button-text {
+         transition:all, 0.45s, cubic-bezier(0.65,0,.076,1) ease-in-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0.75rem 0;
+        margin: 0 0 0 1.85rem;
+        color: black;
+        font-weight: 700;
+        line-height: 1.6;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+    &:hover {
+      .circle {
+        width: 100%;
+        background-color: black;
+        .icon {
+          &.arrow {
+          background: white;
+          transform: translate(1rem, 0);
+          }
+        }
+      }
+      .button-text {
+        color: white;
+      }
+    }
+  }
+
+  @media (max-width:1130px) {
+    .about {
+      margin: 0;
+      
+      padding: 0;
+      
+    }
+    .profile {
+      width: 300px;
+      height: 300px;
+    }
+    
+    // .my-data {
+    //   display: block;
+    //   position: relative;
+      
+
+      
+      
+    //  }
+button {
+  margin-bottom: 2rem;
+  max-width: 300px;
+  max-height: 100px;
+}
+    
+    .about-me {
+      max-width: 400px;
+    }
+    .my-data {
+      .address {
+        margin-top:1rem;
+       }
+     }
+    }
+    
+
+  @media (max-width:970px) {
+    .about {
+      margin: 12px;
+      
+      padding: 0;
+      
+    }
+    .profile {
+      width: 300px;
+      height: 300px;
+    }
+    
+     .my-data {
+       display: block;
+       position: relative;
+      
+
+      
+      
+     }
+button {
+  margin-bottom: 2rem;
+  max-width: 300px;
+  max-height: 100px;
+}
+    
+    .about-me {
+      max-width: 400px;
+    }
+   
+  }
+  

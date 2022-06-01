@@ -1,0 +1,16 @@
+@media (max-width:1130px) {
+    .nav-inner {
+        display: none;
+    }
+    .header {
+        padding: 0;
+        margin: 0;
+    }
+    .nav-link {
+        width: 0;height: 0;
+    }
+    .portfolio {
+       margin: 0;
+        padding: 0;
+    }
+}

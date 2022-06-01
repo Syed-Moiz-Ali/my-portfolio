@@ -1,0 +1,276 @@
+.image {
+  width: 350px;
+  height: 400px;
+  border-radius: 12px;
+}
+.project-info {
+  position: absolute;
+  font-size: 12px;
+  max-width: 350px;
+  font-weight: 300;
+  letter-spacing: 1px;
+
+  left: 50px;
+  bottom: 50px;
+
+  margin: auto;
+  z-index: 500;
+  color: white;
+}
+.eye-icon {
+  font-size: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 250px;
+  margin: auto;
+  z-index: 500;
+  color: white;
+}
+.git-icon {
+  font-size: 40px;
+  position: absolute;
+  top: 0;
+  left: 50px;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  z-index: 500;
+  color: white;
+  transition: all 500ms ease-in-out;
+  &:hover {
+    color: tomato;
+  }
+}
+.title-flex {
+  margin-left: 12px;
+  margin-bottom: 15px;
+}
+.overlay {
+  &:hover {
+    display: block;
+
+    &::before {
+      content: "";
+      position: absolute;
+      opacity: 0.5;
+      display: none;
+      width: 350px;
+      height: 400px;
+      display: block;
+      background: url(../../images/img1.jpg);
+      border-radius: 12px;
+    }
+  }
+}
+.head {
+  background-color: rgb(202, 202, 199);
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+h3 {
+  animation: 2.1s portfolio 1s forwards;
+  transform: translateY(-110%);
+}
+.portfolio {
+  margin-left: 22rem;
+  margin-top: 4rem;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow-x: hidden;
+}
+
+@keyframes portfolio {
+  to {
+    transform: translateX(0);
+  }
+}
+.inner-grid {
+  display: grid;
+  grid-template-columns: 450px 450px;
+  row-gap: 5rem;
+  margin-bottom: 5rem;
+  animation: 1.5s portfolio 500ms forwards;
+  transform: translateY(130%);
+}
+.inner-grid a {
+  text-decoration: none;
+  color: rgb(110, 109, 109);
+  transition: all 500ms ease-in-out;
+  font-weight: 500;
+
+  &:hover {
+    transform: scale(0.9);
+    color: black;
+  }
+}
+
+///RESPONSIVE PART //////
+
+@media (max-width: 1130px) {
+  .portfolio {
+    margin-left: 3rem;
+    margin-top: 3rem;
+    padding: 0;
+  }
+  .image {
+    width: 250px;
+    height: 300px;
+  }
+  .grid {
+    .inner-grid {
+      display: grid;
+      grid-template-columns: 370px 370px;
+      row-gap: 3rem;
+      margin-bottom: 5rem;
+      animation: 1.5s portfolio 500ms forwards;
+      transform: translateY(130%);
+    }
+  }
+  .eye-icon {
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 250px;
+    margin: auto;
+    z-index: 500;
+    color: white;
+  }
+  .git-icon {
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 500;
+    color: white;
+    transition: all 500ms ease-in-out;
+    &:hover {
+      color: tomato;
+    }
+  }
+
+  .overlay {
+    &:hover {
+      display: block;
+      .eye-icon , .git-icon {
+        display: block;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        opacity: 0.5;
+        display: none;
+        width: 250px;
+        height: 300px;
+        display: block;
+        
+        border-radius: 12px;
+      }
+    }
+  }
+  .eye-icon , .git-icon {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .portfolio {
+    margin: 0;
+    margin-top: 3rem;
+    padding: 0;
+    
+    
+   
+  }
+  .title-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .animate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image {
+    width: 300px;
+    height: 300px;
+  }
+  .grid {
+    .inner-grid {
+      display: grid;
+      grid-template-columns: 300px ;
+      row-gap: 3rem;
+      margin-bottom: 5rem;
+      animation: 1.5s portfolio 500ms forwards;
+      transform: translateY(130%);
+    }
+  }
+  .eye-icon {
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 150px;
+    margin: auto;
+    z-index: 500;
+    color: white;
+  }
+  .git-icon {
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    left: 120px;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 500;
+    color: white;
+    transition: all 500ms ease-in-out;
+    &:hover {
+      color: tomato;
+    }
+  }
+
+  .overlay {
+    &:hover {
+      display: block;
+      .eye-icon , .git-icon {
+        display: block;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        opacity: 0.5;
+        display: none;
+        width: 300px;
+        height: 300px;
+        display: block;
+        
+        border-radius: 12px;
+      }
+    }
+
+  }
+
+  .eye-icon , .git-icon {
+    display: none;
+  }
+    
+  
+}
